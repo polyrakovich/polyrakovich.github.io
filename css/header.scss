@@ -1,0 +1,243 @@
+$neon-green: #73ff00;
+$black: #000000;
+$background-black: #161616;
+$dark-gray: #2d2d2d;
+$dark-gray-ellipse: #222222;
+$dark-gray-js-ellipse: #333333;
+$gray: #4f4f4f;
+$span-gray: #3d3d3d;
+$light-gray: #828282;
+$white: #ffffff;
+$nav-white: #c8c7cc;
+$paragraph-white: #f3f3f3;
+$white-ellipse: #b0b0b0;
+$df-white: #dfdfdf;
+$header-white: #e0e0e0;
+
+@mixin header-text-effects {
+  stroke: 1px $black;
+  text-shadow: 0 2px 5px $black;
+}
+@mixin flex-between {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-center {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.header {
+  width: 100%;
+  height: 20%;
+  padding: 1rem;
+  font-family: Roboto, sans-serif;
+  font-weight: bold;
+}
+
+.header__navigation-container {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;;
+  padding: 0;
+}
+
+.navigation__title{
+  text-transform: uppercase;
+  font-size: 3.125rem;
+  color: $nav-white;
+  span {
+    color: $span-gray;
+  }
+}
+
+.navigation__unordered-list {
+  @include flex-between;
+  padding: 0.5rem;
+  font-size: 1.625rem;
+  li:nth-child(1) {
+    @include header-text-effects;
+    padding: 0 1rem;
+
+  }
+  li:nth-child(2) {
+    @include header-text-effects;
+    padding: 0 1rem;
+  }
+  li:nth-child(3) {
+    padding: 0 1rem;
+  }
+  a:hover {
+    color: $neon-green;
+  ;
+  }
+}
+
+.navigation__unordered-list-svg {
+  @include flex-center;
+  padding: 0.5rem;
+  gap: 0.75rem;
+  font-size: 1.625rem;
+  color: $white;
+  svg {
+    width: 34px;
+    height: 34px;
+    fill: $white;
+    path {
+      fill: $white;
+    }
+  }
+  a {
+    @include flex-center;
+  }
+  li:hover {
+    color: $neon-green;
+    path {
+      fill: $neon-green;
+    }
+  }
+  li:nth-child(1) {
+    @include header-text-effects;
+    padding: 0 1rem;
+    span {
+      padding: 0 0.5rem;
+    }
+  }
+  li:nth-child(2) {
+    padding: 0 1rem;
+    span {
+      padding: 0 0.5rem;
+    }
+  }
+  li:nth-child(3) {
+    @include header-text-effects;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+      position: relative;
+      padding: 0.5rem;
+      font-size: 1.3125rem;
+
+      &:hover {
+        stop {
+          stop-color: $neon-green;
+          stop-opacity: 1;
+        }
+      }
+    }
+    .message {
+      position: relative;
+      z-index: 2;
+      width: 36px;
+      height: 36px;
+    }
+    .rectangle {
+      position: absolute;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      fill: transparent;
+    }
+    span {
+      position: relative;
+      z-index: 2;
+      padding: 0 0.5rem;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .header {
+    padding: 1.25rem;
+  }
+  .navigation__title {
+    font-size: 2rem;
+  }
+  .navigation__unordered-list {
+    font-size: 1rem;
+    li:nth-child(n) {
+      padding: 0 0.5rem;
+    }
+  }
+  .navigation__unordered-list-svg {
+    font-size: 1rem;
+
+    li:nth-child(n) {
+      padding: 0 0.5rem;
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    li:nth-child(2) {
+      margin-right: 0;
+    }
+
+    li:nth-child(3) {
+      a {
+        font-size: 1rem;
+        width: 23vw;
+      }
+      svg {
+        width: 22px;
+        height: 22px;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 0.5rem;
+  }
+  .navigation__title {
+    padding-right: 0.25rem;
+    font-size: 0.75rem;
+  }
+  .navigation__unordered-list {
+    font-size: 0.5rem;
+
+    li:nth-child(n) {
+      padding: 0 0.25rem;
+    }
+  }
+  .navigation__unordered-list-svg {
+    li:nth-child(n) {
+      padding: 0 0.25rem;
+      font-size: 0.5rem;
+
+      span {
+        padding: 0 0.25rem;
+      }
+    }
+
+    svg {
+      width: 8px;
+      height: 8px;
+    }
+
+    li:nth-child(2) {
+      margin-right: 0;
+    }
+
+    li:nth-child(3) {
+      a {
+        font-size: 0.5rem;
+        width: 18vw;
+      }
+      .message {
+        width: 10px;
+        height: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,78 @@
+:root {
+    --neon-green: #73ff00;
+    --black: #000000;
+    --background-black: #161616;
+    --dark-gray: #2d2d2d;
+    --dark-gray-ellipse: #222222;
+    --dark-gray-js-ellipse: #333333;
+    --gray: #4f4f4f;
+    --light-gray: #828282;
+    --white: #ffffff;
+    --nav-white: #c8c7cc;
+    --paragraph-white: #f3f3f3;
+    --white-ellipse: #b0b0b0;
+    --df-white: #dfdfdf;
+    --header-white: #e0e0e0;
+    --container: 100%;
+    --padding-container: 10%;
+}
+
+html {
+    box-sizing: border-box;
+    position: relative;
+    background: linear-gradient(135deg, rgba(2,2,2,1) 0%, rgba(60,60,60,1) 100%);
+
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    min-width: 100%;
+    min-height: 100vh;
+    font-family: "Courier Prime", Roboto, sans-serif;
+    background: linear-gradient(135deg, rgba(2,2,2,1) 0%, rgba(60,60,60,1) 50%);
+    color: var(--header-white);
+}
+
+img, svg {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, p, figure {
+    margin: 0;
+}
+
+fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.visually-hidden {
+    position: fixed;
+    transform: scale(0);
+}
+
+.container {
+    max-width: calc(var(--container) + var(--padding-container) * 2);
+    padding: 0 var(--padding-container);
+    margin: 0 auto;
+}
