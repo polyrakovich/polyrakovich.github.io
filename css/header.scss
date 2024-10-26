@@ -44,9 +44,9 @@
 
 .navigation__unordered-list {
   @include flex-between;
-  @include header-text-effects;
   gap: 2rem;
   font-size: 1.625rem;
+  color: white;
 
   a:hover {
     color: $neon-green;
@@ -77,7 +77,6 @@
     }
   }
   li:nth-child(1) {
-    @include header-text-effects;
     padding: 0 1rem;
     span {
       padding: 0 0.5rem;
@@ -90,7 +89,6 @@
     }
   }
   li:nth-child(3) {
-    @include header-text-effects;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -443,11 +443,9 @@ template {
   flex-flow: row nowrap;
   align-items: center;
   justify-content: space-between;
-  stroke: 1px #000000;
-  text-shadow: 0 2px 5px #000000;
-  color: #c8c7cc;
   gap: 2rem;
   font-size: 1.625rem;
+  color: white;
 }
 .navigation__unordered-list a:hover {
   color: #73ff00;
@@ -484,9 +482,6 @@ template {
   fill: #73ff00;
 }
 .navigation__unordered-list-svg li:nth-child(1) {
-  stroke: 1px #000000;
-  text-shadow: 0 2px 5px #000000;
-  color: #c8c7cc;
   padding: 0 1rem;
 }
 .navigation__unordered-list-svg li:nth-child(1) span {
@@ -499,9 +494,6 @@ template {
   padding: 0 0.5rem;
 }
 .navigation__unordered-list-svg li:nth-child(3) {
-  stroke: 1px #000000;
-  text-shadow: 0 2px 5px #000000;
-  color: #c8c7cc;
   display: flex;
   justify-content: center;
   align-items: center;
